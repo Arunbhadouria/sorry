@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to right, #FFC1CC, #FFDEE9);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #FF69B4;
+            text-shadow: 2px 2px #FFC0CB;
+        }
+
+        p {
+            font-size: 1.4em;
+            max-width: 600px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            width: 300px;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid #FF69B4;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .thank-you img {
+            border-radius: 0;
+            border: none;
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            box-shadow: none;
+        }
+
+        button {
+            background-color: #FFB6C1;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #FF69B4;
+            transform: scale(1.1);
+        }
+
+        .thank-you {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="apology">
+        <h1>I'm Sorry</h1>
+        <img src=image.png alt="Cute cat with big eyes" />
+        <p>I want to sincerely apologize for what happened. It was never my intention to hurt you, and I deeply regret my actions. Please forgive me.</p>
+        <button onclick="sendApology()">Forgive Me</button>
+    </div>
+
+    <div class="thank-you">
+        <h1>Thank You!</h1>
+        <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cute cat gif with heart eyes" />
+        <p>Your forgiveness means the world to me. Thank you for being so kind and understanding!</p>
+    </div>
+
+    <script>
+        function sendApology() {
+            document.querySelector('.apology').style.display = 'none';
+            document.querySelector('.thank-you').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
